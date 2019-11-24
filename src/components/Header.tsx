@@ -5,7 +5,7 @@ import { headerStyles as styles } from './styles';
 
 interface HeaderPropsType {
   search: string;
-  setSearch: (string) => void;
+  setSearch: (search: string) => void;
 }
 
 const Header: React.FC<HeaderPropsType> = ({ search, setSearch }) => (
