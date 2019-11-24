@@ -6,6 +6,12 @@
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
     "noEmit": true,
+    "paths": {
+      "src/*": ["./*"],
+      "components/*": ["./components/*"],
+      "screens/*": ["./screens/*"],
+      "navigators/*": ["./navigators/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true
   }

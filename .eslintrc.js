@@ -21,7 +21,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['import', 'react', 'prettier', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    'react/prop-types': 'off',
+  },
   settings: {
     'import/resolver': {
       node: {
