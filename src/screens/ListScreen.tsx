@@ -1,12 +1,24 @@
 import * as React from 'react';
 import { View, Alert } from 'react-native';
+import {
+  NavigationParams,
+  NavigationScreenProp,
+  NavigationState,
+} from 'react-navigation';
 
 import { Header, CharactersList, Footer } from 'components';
 import useFetch from 'utils/useFetch';
 import { getApiUrl, debounce } from 'utils/helpers';
-import { homeStyles as styles } from './styles';
+import { listStyles as styles } from './styles';
+import { CharacterType } from 'src/models';
 
-const HomeScreen: React.FC = () => {
+interface ListScreenPropsType {
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+}
+
+const ListScreen: React.FC<ListScreenPropsType> = ({
+  navigation: { navigate },
+}) => {
   const [search, setSearch] = React.useState<string>('');
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [name, setName] = React.useState<string>('');
@@ -16,6 +28,9 @@ const HomeScreen: React.FC = () => {
     setSearch(search);
     debounce(() => setName(search));
   };
+
+  const openCharacter = (character: CharacterType) =>
+    navigate('Detail', { character });
 
   let charactersList = [];
   let numPages = 0;
@@ -30,7 +45,10 @@ const HomeScreen: React.FC = () => {
   return (
     <View style={styles.mainContainer}>
       <Header search={search} setSearch={updateNameSearch} />
-      <CharactersList charactersList={charactersList} />
+      <CharactersList
+        charactersList={charactersList}
+        openCharacter={openCharacter}
+      />
       <Footer
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
@@ -40,4 +58,4 @@ const HomeScreen: React.FC = () => {
   );
 };
 
-export default HomeScreen;
+export default ListScreen;

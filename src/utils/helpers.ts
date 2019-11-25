@@ -22,3 +22,6 @@ export const getVisiblePages = (
     return [numPages - 2, numPages - 1, numPages];
   else return [currentPage - 1, currentPage, currentPage + 1];
 };
+
+export const isEmptyString = (text: string) =>
+  text === null || text === undefined || text === '';
