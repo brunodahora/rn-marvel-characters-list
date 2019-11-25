@@ -3,20 +3,8 @@ import { View, Alert } from 'react-native';
 
 import { Header, CharactersList, Footer } from 'components';
 import useFetch from 'utils/useFetch';
+import { getApiUrl, debounce } from 'utils/helpers';
 import { homeStyles as styles } from './styles';
-import { API_URL, API_TS, API_KEY, API_HASH } from '../../environment';
-
-export const getApiUrl = (currentPage: number, name?: string): string =>
-  `${API_URL}/characters?${
-    name ? `name=${name.replace(' ', '+')}&` : ''
-  }limit=4&offset=${4 *
-    (currentPage - 1)}&ts=${API_TS}&apikey=${API_KEY}&hash=${API_HASH}`;
-
-let timeoutId: number = null;
-const debounce = (func: Function, timeout = 300): void => {
-  if (timeoutId) clearTimeout(timeoutId);
-  timeoutId = setTimeout(() => func(), timeout);
-};
 
 const HomeScreen: React.FC = () => {
   const [search, setSearch] = React.useState<string>('');
