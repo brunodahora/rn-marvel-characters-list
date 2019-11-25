@@ -14,7 +14,11 @@ const CharactersList: React.FC<CharactersListPropsType> = ({
   <View style={styles.container}>
     <Text style={styles.listHeader}>Nome</Text>
     {charactersList.map(
-      ({ id, name, thumbnail: { path, extension } }: CharacterType) => (
+      ({
+        id,
+        name,
+        thumbnail: { path, extension },
+      }: CharacterType): JSX.Element => (
         <View key={id} style={styles.characterContainer}>
           <Image
             source={{ uri: `${path}.${extension}` }}

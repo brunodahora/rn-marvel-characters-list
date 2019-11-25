@@ -24,6 +24,16 @@ interface CharactersListStylesType {
   characterImage: ImageStyle;
 }
 
+interface FooterStylesType {
+  container: ViewStyle;
+  pagesContainer: ViewStyle;
+  defaultFont: TextStyle;
+  leftArrow: TextStyle;
+  rightArrow: TextStyle;
+  selectedPage: TextStyle;
+  pageNumber: TextStyle;
+}
+
 export const headerStyles = StyleSheet.create<HeaderStylesType>({
   container: { flexDirection: 'column', padding: 12 },
   titleContainer: { flexDirection: 'row' },
@@ -50,6 +60,7 @@ export const charactersListStyles = StyleSheet.create<CharactersListStylesType>(
     listHeader: {
       backgroundColor: colors.marvelRed,
       color: colors.white,
+      fontSize: 16,
       paddingBottom: 12,
       paddingLeft: 60,
       paddingTop: 12,
@@ -74,3 +85,41 @@ export const charactersListStyles = StyleSheet.create<CharactersListStylesType>(
     },
   }
 );
+
+export const footerStyles = StyleSheet.create<FooterStylesType>({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingLeft: 30,
+    paddingTop: 18,
+    paddingRight: 30,
+    paddingBottom: 24,
+  },
+  pagesContainer: { flexDirection: 'row', justifyContent: 'space-between' },
+  defaultFont: { color: colors.marvelRed, fontSize: 16 },
+  leftArrow: { marginRight: 60 },
+  rightArrow: { marginLeft: 40 },
+  selectedPage: {
+    backgroundColor: colors.marvelRed,
+    borderColor: colors.marvelRed,
+    borderWidth: 1,
+    borderRadius: 32,
+    color: colors.white,
+    fontSize: 21,
+    height: 32,
+    marginLeft: 20,
+    textAlign: 'center',
+    width: 32,
+  },
+  pageNumber: {
+    borderColor: colors.marvelRed,
+    borderWidth: 1,
+    borderRadius: 32,
+    color: colors.marvelRed,
+    fontSize: 21,
+    height: 32,
+    marginLeft: 20,
+    textAlign: 'center',
+    width: 32,
+  },
+});
