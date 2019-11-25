@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { CharacterType } from '../models';
-
-import { charactersListStyles as styles } from './styles';
+import { View, Text } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Character from './Character';
+import { charactersListStyles as styles } from './styles';
+
+import { CharacterType } from '../models';
 
 interface CharactersListPropsType {
   charactersList: Array<CharacterType>;
@@ -18,24 +19,13 @@ const CharactersList: React.FC<CharactersListPropsType> = ({
     <Text style={styles.listHeader}>Nome</Text>
     <ScrollView>
       {charactersList.map(
-        (character: CharacterType): JSX.Element => {
-          const {
-            id,
-            name,
-            thumbnail: { path, extension },
-          } = character;
-          return (
-            <TouchableOpacity key={id} onPress={() => openCharacter(character)}>
-              <View style={styles.characterContainer}>
-                <Image
-                  source={{ uri: `${path}.${extension}` }}
-                  style={styles.characterImage}
-                />
-                <Text style={styles.characterName}>{name}</Text>
-              </View>
-            </TouchableOpacity>
-          );
-        }
+        (character: CharacterType): JSX.Element => (
+          <Character
+            key={character.id}
+            {...character}
+            onPress={() => openCharacter(character)}
+          />
+        )
       )}
     </ScrollView>
   </View>

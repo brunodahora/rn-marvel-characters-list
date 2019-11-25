@@ -26,7 +26,10 @@ const ListScreen: React.FC<ListScreenPropsType> = ({
 
   const updateNameSearch = (search: string): void => {
     setSearch(search);
-    debounce(() => setName(search));
+    debounce(() => {
+      setName(search);
+      setCurrentPage(1);
+    });
   };
 
   const openCharacter = (character: CharacterType) =>
