@@ -88,6 +88,7 @@ export const charactersListStyles = StyleSheet.create<CharactersListStylesType>(
 
 export const footerStyles = StyleSheet.create<FooterStylesType>({
   container: {
+    backgroundColor: colors.white,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingLeft: 30,

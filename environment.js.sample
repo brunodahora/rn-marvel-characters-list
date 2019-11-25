@@ -1,1 +1,4 @@
-export const apiKey = 'qwerty12356';
+export const API_URL = 'https://gateway.marvel.com:443/v1/public';
+export const API_TS = 'foobar';
+export const API_KEY = 'qwerty12356';
+export const API_HASH = 'asdf0987';

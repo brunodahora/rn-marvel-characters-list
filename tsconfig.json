@@ -10,7 +10,8 @@
       "src/*": ["./*"],
       "components/*": ["./components/*"],
       "screens/*": ["./screens/*"],
-      "navigators/*": ["./navigators/*"]
+      "navigators/*": ["./navigators/*"],
+      "utils/*": ["./utils/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true

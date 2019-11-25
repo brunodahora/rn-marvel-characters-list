@@ -13,6 +13,8 @@ export const getVisiblePages = (
   currentPage: number,
   numPages: number
 ): Array<number> => {
+  console.log(numPages);
+  if (numPages < 3) return [...Array(numPages + 1).keys()].slice(1);
   if (currentPage === 1) return [1, 2, 3];
   else if (currentPage === numPages)
     return [numPages - 2, numPages - 1, numPages];
