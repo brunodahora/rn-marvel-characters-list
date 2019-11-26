@@ -34,7 +34,12 @@ const Footer: React.FC<FooterPropsType> = ({
         {getVisiblePages(currentPage, numPages).map(
           (page: number): JSX.Element => (
             <TouchableOpacity key={page} onPress={() => setCurrentPage(page)}>
-              <Text style={getPageStyle(page)}>{page}</Text>
+              <Text
+                testID={currentPage === page ? 'selected-page' : `page-${page}`}
+                style={getPageStyle(page)}
+              >
+                {page}
+              </Text>
             </TouchableOpacity>
           )
         )}

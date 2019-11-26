@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     es6: true,
+    'jest/globals': true,
   },
   extends: [
     'plugin:react/recommended',
@@ -12,6 +13,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
     fetch: false,
+    global: false,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,7 +23,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['import', 'react', 'prettier', '@typescript-eslint'],
+  plugins: ['import', 'react', 'prettier', '@typescript-eslint', 'jest'],
   rules: {
     'react/prop-types': 'off',
   },

@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetailsScree /> renders the character data 1`] = `
+<View
+  collapsable={true}
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 1,
+        "justifyContent": "flex-start",
+        "padding": 16,
+      }
+    }
+  >
+    <ScrollView>
+      <Image
+        source={
+          Object {
+            "uri": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+          }
+        }
+        style={
+          Object {
+            "alignSelf": "center",
+            "borderRadius": 50,
+            "height": 100,
+            "marginRight": 25,
+            "width": 100,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#D42026",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginTop": 16,
+          }
+        }
+      >
+        Nome
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Tony Stark
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#D42026",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginTop": 16,
+          }
+        }
+      >
+        Séries
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Amazing Spider-Man (1999 - 2013)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        AMAZING SPIDER-MAN VOL. 10: NEW AVENGERS TPB (2005)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Black Goliath (1976)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Captain America (1968 - 1996)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Captain America (2002 - 2004)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Captain Marvel (2008)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Fantastic Five (2007)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        House of M: Fantastic Four/Iron Man (2006)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Indestructible Hulk (2012 - 2014)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        International Iron Man (2017)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man 2020 (1994)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man by Design (2010)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man: Extremis Director's Cut (2010)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man: House of M (2005)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man: Kiss and Kill (2010)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Iron Man: The End (2008 - 2010)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Marvel Two-in-One (1974 - 1983)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        New Avengers (2013 - 2015)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        New Warriors (2007 - 2009)
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Sentry: Fallen Sun (2010)
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#D42026",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginTop": 16,
+          }
+        }
+      >
+        Eventos
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Civil War
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        House of M
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Other - Evolve or Die
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 21,
+          }
+        }
+      >
+        Siege
+      </Text>
+    </ScrollView>
+  </View>
+</View>
+`;
