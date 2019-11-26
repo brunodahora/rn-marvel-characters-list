@@ -35,21 +35,31 @@ describe('<Character />', () => {
               }
             }
           >
-            <Image
-              source={
-                Object {
-                  "uri": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-                }
-              }
+            <View
               style={
                 Object {
                   "borderRadius": 50,
                   "height": 50,
                   "marginRight": 25,
+                  "overflow": "hidden",
                   "width": 50,
                 }
               }
-            />
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              />
+            </View>
             <Text
               style={
                 Object {
