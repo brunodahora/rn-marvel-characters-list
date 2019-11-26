@@ -1,4 +1,10 @@
-import { StyleSheet, ViewStyle, TextStyle, ImageStyle } from 'react-native';
+import {
+  StyleSheet,
+  ViewStyle,
+  TextStyle,
+  ImageStyle,
+  Platform,
+} from 'react-native';
 import { colors } from '../constants';
 
 interface ListStylesType {
@@ -13,7 +19,14 @@ interface DetailStylesType {
 }
 
 export const listStyles = StyleSheet.create<ListStylesType>({
-  mainContainer: { flex: 1 },
+  mainContainer: {
+    flex: 1,
+    ...Platform.select({
+      ios: {
+        paddingTop: 20,
+      },
+    }),
+  },
 });
 
 export const detailStyles = StyleSheet.create<DetailStylesType>({
