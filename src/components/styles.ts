@@ -22,6 +22,7 @@ interface CharactersListStylesType {
   characterContainer: ViewStyle;
   characterName: TextStyle;
   characterImage: ImageStyle;
+  characterImageContainer: ViewStyle;
 }
 
 interface FooterStylesType {
@@ -30,6 +31,8 @@ interface FooterStylesType {
   defaultFont: TextStyle;
   leftArrow: TextStyle;
   rightArrow: TextStyle;
+  pageNumberContainer: ViewStyle;
+  selectedPageNumberContainer: ViewStyle;
   selectedPage: TextStyle;
   pageNumber: TextStyle;
 }
@@ -77,7 +80,12 @@ export const charactersListStyles = StyleSheet.create<CharactersListStylesType>(
     characterImage: {
       height: 50,
       width: 50,
+    },
+    characterImageContainer: {
+      height: 50,
+      width: 50,
       borderRadius: 50,
+      overflow: 'hidden',
       marginRight: 25,
     },
     characterName: {
@@ -102,27 +110,27 @@ export const footerStyles = StyleSheet.create<FooterStylesType>({
   defaultFont: { color: colors.marvelRed, fontSize: 16 },
   leftArrow: { marginRight: 60 },
   rightArrow: { marginLeft: 40 },
-  selectedPage: {
-    backgroundColor: colors.marvelRed,
+  pageNumberContainer: {
+    alignItems: 'center',
     borderColor: colors.marvelRed,
     borderWidth: 1,
     borderRadius: 32,
-    color: colors.white,
-    fontSize: 21,
     height: 32,
+    justifyContent: 'center',
     marginLeft: 20,
-    textAlign: 'center',
     width: 32,
   },
+  selectedPageNumberContainer: {
+    backgroundColor: colors.marvelRed,
+  },
+  selectedPage: {
+    color: colors.white,
+    fontSize: 21,
+    textAlign: 'center',
+  },
   pageNumber: {
-    borderColor: colors.marvelRed,
-    borderWidth: 1,
-    borderRadius: 32,
     color: colors.marvelRed,
     fontSize: 21,
-    height: 32,
-    marginLeft: 20,
     textAlign: 'center',
-    width: 32,
   },
 });

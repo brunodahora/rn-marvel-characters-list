@@ -6,6 +6,7 @@ import {
   Platform,
 } from 'react-native';
 import { colors } from '../constants';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 interface ListStylesType {
   mainContainer: ViewStyle;
@@ -23,7 +24,7 @@ export const listStyles = StyleSheet.create<ListStylesType>({
     flex: 1,
     ...Platform.select({
       ios: {
-        paddingTop: 20,
+        paddingTop: getStatusBarHeight(true),
       },
     }),
   },

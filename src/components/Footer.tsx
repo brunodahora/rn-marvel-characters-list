@@ -19,6 +19,13 @@ const Footer: React.FC<FooterPropsType> = ({
   const getPageStyle = (page: number): ViewStyle =>
     page === currentPage ? styles.selectedPage : styles.pageNumber;
 
+  const getPageContainerStyle = (page: number): Array<ViewStyle> => {
+    const stylesArray = [styles.pageNumberContainer];
+    if (page === currentPage)
+      stylesArray.push(styles.selectedPageNumberContainer);
+    return stylesArray;
+  };
+
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === numPages || numPages === 0;
 
@@ -34,12 +41,16 @@ const Footer: React.FC<FooterPropsType> = ({
         {getVisiblePages(currentPage, numPages).map(
           (page: number): JSX.Element => (
             <TouchableOpacity key={page} onPress={() => setCurrentPage(page)}>
-              <Text
-                testID={currentPage === page ? 'selected-page' : `page-${page}`}
-                style={getPageStyle(page)}
-              >
-                {page}
-              </Text>
+              <View style={getPageContainerStyle(page)}>
+                <Text
+                  testID={
+                    currentPage === page ? 'selected-page' : `page-${page}`
+                  }
+                  style={getPageStyle(page)}
+                >
+                  {page}
+                </Text>
+              </View>
             </TouchableOpacity>
           )
         )}

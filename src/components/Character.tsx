@@ -16,10 +16,12 @@ const Character: React.FC<CharacterPropsType> = ({
 }) => (
   <TouchableOpacity onPress={onPress}>
     <View style={styles.characterContainer}>
-      <Image
-        source={{ uri: `${path}.${extension}` }}
-        style={styles.characterImage}
-      />
+      <View style={styles.characterImageContainer}>
+        <Image
+          source={{ uri: `${path}.${extension}` }}
+          style={styles.characterImage}
+        />
+      </View>
       <Text style={styles.characterName}>{name}</Text>
     </View>
   </TouchableOpacity>
