@@ -11,8 +11,9 @@ To execute it you need to:
 
 1. Have installed `yarn|npm` and the `expo-cli`.
 2. Run `yarn` to install all dependencies.
-3. Run `expo start` to run the Expo Server.
-4. Select to run in a Android Emulator (`a`) or in a iOS Emulator (`i`).
+3. Copy the file `environment.js.sample`, change the name to `environment.js` and change the values to use your Marvel keys
+4. Run `expo start` to run the Expo Server.
+5. Select to run in a Android Emulator (`a`) or in a iOS Emulator (`i`).
 
 ## Screenshots
 
